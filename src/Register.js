@@ -49,24 +49,24 @@ function Register({setIsLoggedin}) {
     return (
       <>
         <form className="register" onSubmit={handleSubmit}>
-            <p>First Name</p>
+            <div className="labels">First Name</div>
             <input type="text" id="fname" placeholder="Enter your name"></input>
-            <p>Last Name</p>
+            <div className="labels">Last Name</div>
             <input type="text" id="lname" placeholder="Enter your name"></input>
             <div className="disease">
-                <p>Diseases
+                <div className="labels">Diseases
                 <input type='checkbox' id='medcb' onInput={() => {if (checkboxcd === false)
                     setcheckboxcd(true)
                     else
                     setcheckboxcd(false)
                 }}></input>
-                </p>
+                </div>
             </div>
             {checkboxcd? <input type="text" id="medcd" placeholder="Enter your congenital disease"></input> : 
             <input type="text" id="medcd" value="no diseases" disabled placeholder="Enter your congenital disease"></input>}
-            <p>Location</p>
+            <div className="labels">Location</div>
               <div className="loc">
-                <p>Get Location automatically
+                <div className="labels">Get Location automatically
                 <input id='loccb' type="checkbox" onInput={() => {if (checkboxloc === false)
                     {setcheckboxloc(true);
                     }
@@ -74,7 +74,7 @@ function Register({setIsLoggedin}) {
                    { setcheckboxloc(false);
                     getLocation();}
                 }}></input>
-                </p>
+                </div>
               </div>
   
                 {checkboxloc? <input type="text" id='loc' onChange={(e)=> {

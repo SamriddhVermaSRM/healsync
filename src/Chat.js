@@ -27,8 +27,7 @@ function getchat() {
 
 var data = getchat();
 function dataa(text) {
-    if (text != null)
-    {
+    if (text != null) {
         data.history.push(text);
     }
     localStorage.setItem("chat", JSON.stringify(data));
@@ -43,10 +42,10 @@ function dataa(text) {
 // Gemini API
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const genAI = new GoogleGenerativeAI(API_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 const chat = model.startChat(localStorage.getItem("chatai"));
 
-    
+
 
 function ChatBox() {
     const [userQuery, setuserQuery] = useState("");
@@ -55,15 +54,14 @@ function ChatBox() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (userQuery !== "")
-        {
-            dataa({role: "user",parts: userQuery});
+        if (userQuery !== "") {
+            dataa({ role: "user", parts: userQuery });
             setdata(dataa());
             document.getElementById("messagebox").value = "";
             console.log(DATA);
             ai();
             setuserQuery("");
-            
+
         }
     }
 
@@ -74,9 +72,9 @@ function ChatBox() {
             const chunkText = chunk.text();
             // chunktext(chunkText);
             text += chunkText;
-            
+
         }
-        dataa({role: "model",parts: text});
+        dataa({ role: "model", parts: text });
         setdata(dataa());
         setuserQuery("response received");
         setTimeout(() => {
@@ -86,7 +84,7 @@ function ChatBox() {
     };
 
 
-    return(
+    return (
         <>
             <Header />
             <div className="chat">
@@ -98,27 +96,27 @@ function ChatBox() {
                     </button>
                 </form>
             </div>
-            
+
         </>
     );
 }
 
-function ChatHistory({data}) {
+function ChatHistory({ data }) {
     return (
         <div className="chathistory">
-            {data.history.map((chat) => {
-                        
-                        if (chat.role === "user") {
-                            return (
-                                <User name={localStorage.getItem("fname")} message={chat.parts} />
-                            );
-                                }
-                        else {
-                            return (
-                                <Ai name={"Ai"} message={chat.parts} />
-                            );
-                                }
-                    })}
+            {data.history.map((chat, key) => {
+
+                if (chat.role === "user") {
+                    return (
+                        <User key={key} name={localStorage.getItem("fname")} message={chat.parts} />
+                    );
+                }
+                else {
+                    return (
+                        <Ai key={key} name={"Ai"} message={chat.parts} />
+                    );
+                }
+            })}
         </div>
     )
 }
@@ -135,10 +133,14 @@ function User(props) {
 
 // to display ai chat from local storage
 function Ai(props) {
+    let temp = props.message;
+    // temp = temp.replace(/\*\*([A-Za-z0-9]+( [A-Za-z0-9]+)+):\*\*/g, ".");
+    temp = temp.replace(/:\*\*/g, ":");
+    temp = temp.replace(/\*\*/g, '');
     return (
         <div className="ai">
             <div className="ai-name">{props.name}</div>
-            <div className="ai-message">{props.message}</div>
+            <div className="ai-message">{temp}</div>
         </div>
     );
 }

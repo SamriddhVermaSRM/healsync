@@ -1,51 +1,60 @@
 {
-    "name": "",
-    "age":  "",
-    "location": "",
-    "chat": 
-    { 
-        "history": [
-        {
-          "role": "user",
-          "parts": "Hello, I have 2 dogs in my house."
-        },
-        {
-          "role": "model",
-          "parts": "Great to meet you. What would you like to know?"
-        }
-      ],
-      "generationConfig": {
-        "maxOutputTokens": "100"
-      }
-    },
-    "ls": {
-    "history": [{
-        "role": "user",
-        "parts": "Hello, I have 2 dogs in my house."
-    }, {
-        "role": "model",
-        "parts": "Great to meet you. What would you like to know?"
-    }, {
-        "role": "user",
-        "parts": "how many paws do i have in my house?"
-    }, {
-        "role": "model",
-        "parts": "You have a total of **16 paws** in your house with 2 dogs.\n\n* Each dog has 4 paws.\n* 2 dogs x 4 paws/dog = 8 paws\n* 8 paws x 2 dogs = 16 paws\n\nTherefore, you have 16 paws in your house."
-    }, {
-        "role": "user",
-        "parts": "they gave birth to 8 puppies"
-    }, {
-        "role": "model",
-        "parts": "Congratulations on the new puppies! That's a lot of paws to keep track of.\n\nIncluding the puppies, you now have a total of **24 paws** in your house:\n\n* 2 adult dogs: 8 paws\n* 8 puppies: 16 paws\n\nTotal: 24 paws\n\nWith all these furry friends running around, your house must be a lively and joyful place.\n\nHere are some tips for caring for your new puppies:\n\n* Make sure they have a warm and comfortable place to sleep.\n* Feed them a high-quality puppy food and make sure they have access to fresh water at all times.\n* Take them to the vet for regular checkups.\n* Start training them early so they learn good behavior.\n* Socialize them with other dogs and people so they become well-rounded and friendly.\n\nEnjoy your new puppies!"
-    }, {
-        "role": "user",
-        "parts": "how many paws do i have in my house now?"
-    }, {
-        "role": "model",
-        "parts": "You now have a total of **32 paws** in your house:\n\n* 2 adult dogs: 8 paws\n* 8 puppies: 16 paws\n* 8 new puppies: 16 paws\n\nTotal: 32 paws\n\nThat's a lot of paws to keep track of, but I'm sure you're up to the challenge.\n\nWith all these furry friends running around, your house must be a lively and joyful place. Enjoy your new puppies!"
-    }],
-    "generationConfig": {
-        "maxOutputTokens": "100"
-    }
-}
+	"name": "",
+	"age": "",
+	"location": "",
+	"chat": {
+		"history": [
+			{
+				"role": "user",
+				"parts": "Hello, I have 2 dogs in my house."
+			},
+			{
+				"role": "model",
+				"parts": "Great to meet you. What would you like to know?"
+			}
+		],
+		"generationConfig": {
+			"maxOutputTokens": "100"
+		}
+	},
+	"ls": {
+		"history": [
+			{
+				"role": "user",
+				"parts": "Hello, I have 2 dogs in my house."
+			},
+			{
+				"role": "model",
+				"parts": "Great to meet you. What would you like to know?"
+			},
+			{
+				"role": "user",
+				"parts": "how many paws do i have in my house?"
+			},
+			{
+				"role": "model",
+				"parts": "You have a total of **16 paws** in your house with 2 dogs.\n\n* Each dog has 4 paws.\n* 2 dogs x 4 paws/dog = 8 paws\n* 8 paws x 2 dogs = 16 paws\n\nTherefore, you have 16 paws in your house."
+			},
+			{
+				"role": "user",
+				"parts": "they gave birth to 8 puppies"
+			},
+			{
+				"role": "model",
+				"parts": "Congratulations on the new puppies! That's a lot of paws to keep track of.\n\nIncluding the puppies, you now have a total of **24 paws** in your house:\n\n* 2 adult dogs: 8 paws\n* 8 puppies: 16 paws\n\nTotal: 24 paws\n\nWith all these furry friends running around, your house must be a lively and joyful place.\n\nHere are some tips for caring for your new puppies:\n\n* Make sure they have a warm and comfortable place to sleep.\n* Feed them a high-quality puppy food and make sure they have access to fresh water at all times.\n* Take them to the vet for regular checkups.\n* Start training them early so they learn good behavior.\n* Socialize them with other dogs and people so they become well-rounded and friendly.\n\nEnjoy your new puppies!"
+			},
+			{
+				"role": "user",
+				"parts": "how many paws do i have in my house now?"
+			},
+			{
+				"role": "model",
+				"parts": "You now have a total of **32 paws** in your house:\n\n* 2 adult dogs: 8 paws\n* 8 puppies: 16 paws\n* 8 new puppies: 16 paws\n\nTotal: 32 paws\n\nThat's a lot of paws to keep track of, but I'm sure you're up to the challenge.\n\nWith all these furry friends running around, your house must be a lively and joyful place. Enjoy your new puppies!"
+			}
+		],
+		"generationConfig": {
+			"maxOutputTokens": "100"
+		},
+		"ti": {}
+	}
 }
